@@ -43,8 +43,6 @@ defmodule AshTable.TableHelpers do
     <circle cx="16" cy="16" r="16"/>
     </svg>
 
-    <% else %>
-
 
     <% end %>
 
