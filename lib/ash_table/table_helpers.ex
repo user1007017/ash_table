@@ -37,7 +37,10 @@ defmodule AshTable.TableHelpers do
 
     <button :if={@results.offset > 0} phx-click="set_page" phx-value-offset={@results.offset - @results.limit} phx-target={@target}>Previous</button>
 
+    <%= if {@results.offset > 0} do %>
     &nbsp;/&nbsp;
+    <% end %>
+
     <button :if={@results.more?} phx-click="set_page" phx-value-offset={@results.offset + @results.limit} phx-target={@target}>Next</button>
     """
   end
