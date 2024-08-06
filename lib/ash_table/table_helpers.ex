@@ -36,10 +36,11 @@ defmodule AshTable.TableHelpers do
 
     <%!-- dummy left --%>
 
-    <svg if={@results.offset = 0} fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <% if @results.offset == 0 %>
+    <svg  class="bg-white dark:bg-slate-900 dark:text-slate-100 dark:fill-current text-white" height="24px" width="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <circle cx="16" cy="16" r="16"/>
     </svg>
-
+    <% end %>
 
 
     <%!-- left --%>
