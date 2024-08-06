@@ -32,7 +32,6 @@ defmodule AshTable.TableHelpers do
 
   def paginator(assigns) do
     ~H"""
-    <div :if={@results}>Viewing <%= @results.offset + 1 %> to <%= @results.offset + @results.limit %></div>
 
 
     <%!-- left --%>
@@ -65,6 +64,8 @@ defmodule AshTable.TableHelpers do
     </button>
 
 
+
+
     <% end %>
 
 
@@ -82,6 +83,11 @@ defmodule AshTable.TableHelpers do
     </svg>
 
     </button>
+
+
+    <div :if={@results}>Viewing <%= @results.offset + 1 %> to <%= @results.offset + @results.limit %></div>
+
+
     """
   end
 
