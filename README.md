@@ -1,7 +1,7 @@
 
 # Fork
 
-Some quick & dirty modifications for paginator & sort icons
+Some quick & dirty modifications for paginator & sort icons, not perfect
 
 ## mix.exs deps
 
