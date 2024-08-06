@@ -45,8 +45,6 @@ defmodule AshTable.TableHelpers do
     </button>
     <% else %>
 
-    <% end %>
-
 
     <button :if={@results.offset > 0} phx-click="set_page" phx-value-offset={@results.offset - @results.limit} phx-target={@target} >
 
@@ -60,6 +58,11 @@ defmodule AshTable.TableHelpers do
     </svg>
 
     </button>
+
+
+    <% end %>
+
+
 
     <%!-- right --%>
     <button :if={@results.more?} phx-click="set_page" phx-value-offset={@results.offset + @results.limit} phx-target={@target} >
