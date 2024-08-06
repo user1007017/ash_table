@@ -36,6 +36,14 @@ defmodule AshTable.TableHelpers do
 
 
     <%!-- left --%>
+
+    <%= if @results.offset < 1 do %>
+    <svg fill="#000000" width="24px" height="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="16"/>
+    </svg>
+    <% end %>
+
+
     <button :if={@results.offset > 0} phx-click="set_page" phx-value-offset={@results.offset - @results.limit} phx-target={@target} >
 
     <svg fill="dark:text-white"
