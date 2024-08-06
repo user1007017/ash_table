@@ -41,8 +41,8 @@ defmodule AshTable.TableHelpers do
     <button id="dummy">
     <svg 
 
-    fill="dark:text-slate-100"
-    class="bg-slate-900 dark:bg-white dark:text-white dark:fill-current text-white" 
+    fill=""
+    class="bg-slate-900 dark:bg-white" 
 
     width="24px" height="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <circle cx="16" cy="16" r="16"/>
