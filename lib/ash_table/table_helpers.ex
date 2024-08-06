@@ -38,7 +38,7 @@ defmodule AshTable.TableHelpers do
     <%!-- left --%>
 
     <%= if @results.offset == 0 do %>
-    <button>
+    <button id="dummy">
     <svg fill="#000000" width="24px" height="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <circle cx="16" cy="16" r="16"/>
     </svg>
@@ -46,7 +46,7 @@ defmodule AshTable.TableHelpers do
     <% else %>
 
 
-    <button :if={@results.offset > 0 } phx-click="set_page" phx-value-offset={@results.offset - @results.limit} phx-target={@target} >
+    <button id="left" :if={@results.offset > 0 } phx-click="set_page" phx-value-offset={@results.offset - @results.limit} phx-target={@target} >
 
     <svg fill="dark:text-white"
     class="bg-white dark:bg-slate-900 dark:text-slate-100 dark:fill-current text-white" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -65,7 +65,7 @@ defmodule AshTable.TableHelpers do
 
 
     <%!-- right --%>
-    <button :if={@results.more?} phx-click="set_page" phx-value-offset={@results.offset + @results.limit} phx-target={@target} >
+    <button id="right" :if={@results.more?} phx-click="set_page" phx-value-offset={@results.offset + @results.limit} phx-target={@target} >
 
     <svg fill="dark:text-white"
     class="bg-white dark:bg-slate-900 dark:text-slate-100 dark:fill-current text-white" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
