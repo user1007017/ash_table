@@ -84,9 +84,9 @@ defmodule AshTable.TableHelpers do
 
     </button>
 
-
-    <div :if={@results}>Viewing <%= @results.offset + 1 %> to <%= @results.offset + @results.limit %></div>
-
+    <span class="leading-2">
+    Viewing <%= @results.offset + 1 %> to <%= @results.offset + @results.limit %>
+    </span>
 
     """
   end
