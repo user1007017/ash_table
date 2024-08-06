@@ -1,4 +1,6 @@
 <div>
+<TableHelpers.paginator target={@myself} :if={assigns[:limit]} results={@results}/>
+
 <table>
   <%= if assigns[:caption] do %>
     <caption id="caption"><%= @caption %></caption>
@@ -30,6 +32,6 @@
     <% end %>
   </tbody>
 </table>
-<TableHelpers.paginator target={@myself} :if={assigns[:limit]} results={@results}/>
+
 </div>
   
