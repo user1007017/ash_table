@@ -32,8 +32,12 @@ defmodule AshTable.TableHelpers do
 
   def paginator(assigns) do
     ~H"""
-    <button :if={@results.offset > 0} phx-click="set_page" phx-value-offset={@results.offset - @results.limit} phx-target={@target}>Previous</button>
+
     <div :if={@results}>Viewing <%= @results.offset + 1 %> to <%= @results.offset + @results.limit %></div>
+
+    <button :if={@results.offset > 0} phx-click="set_page" phx-value-offset={@results.offset - @results.limit} phx-target={@target}>Previous</button>
+
+    &nbsp;/&nbsp;
     <button :if={@results.more?} phx-click="set_page" phx-value-offset={@results.offset + @results.limit} phx-target={@target}>Next</button>
     """
   end
