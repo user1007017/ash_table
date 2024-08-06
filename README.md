@@ -1,3 +1,18 @@
+
+# Fork
+
+Some quick & dirty modifications for paginator & sort icons
+
+## mix.exs deps
+
+{:ash_table, git: "https://github.com/user1007017/ash_table", ref: "main"}
+
+## update
+
+mix deps.unlock ash_table; rm -rf deps/ash_table ;mix deps.get; mix deps.compile; iex -S mix phx.server
+
+
+
 # AshTable
 
 This is a sortable, paginated table component for Ash resources or queries
