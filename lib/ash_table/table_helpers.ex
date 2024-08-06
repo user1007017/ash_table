@@ -34,6 +34,15 @@ defmodule AshTable.TableHelpers do
     ~H"""
     <div :if={@results}>Viewing <%= @results.offset + 1 %> to <%= @results.offset + @results.limit %></div>
 
+    <%!-- dummy left --%>
+
+    <svg if={@results.offset = 0} fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="16"/>
+    </svg>
+
+
+
+    <%!-- left --%>
     <button :if={@results.offset > 0} phx-click="set_page" phx-value-offset={@results.offset - @results.limit} phx-target={@target}>
 
     <svg fill="dark:text-white"
@@ -47,6 +56,7 @@ defmodule AshTable.TableHelpers do
 
     </button>
 
+    <%!-- right --%>
     <button :if={@results.more?} phx-click="set_page" phx-value-offset={@results.offset + @results.limit} phx-target={@target}>
 
     <svg fill="dark:text-white"
